@@ -21,3 +21,7 @@ Writtend mostly by GPT-4, this [R Markdown file](https://github.com/gexijin/gEDA
 ![image](https://github.com/gexijin/gEDA/assets/18232433/a57e1be7-7187-4b9c-9e10-2d884170d2f9)
 
 ![image](https://github.com/gexijin/gEDA/assets/18232433/d16b5db4-4e32-4872-b7ac-df727a1b6a67)
+
+
+![image](https://github.com/gexijin/gEDA/assets/18232433/29acb47b-148a-4a7a-a03e-f24c39229a71)
+
