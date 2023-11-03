@@ -1,6 +1,8 @@
 # An RMarkdown template for exploratory analysis of any dataset
 
-Writtend mostly by GPT-4, this [R Markdown file](https://github.com/gexijin/gEDA/blob/main/eda.Rmd) can be used to generate an EDA report like [this.](https://htmlpreview.github.io/?https://github.com/gexijin/gEDA/blob/main/example_report.html)  
+Writtend mostly by GPT-4, this [R Markdown file](https://github.com/gexijin/gEDA/blob/main/eda.Rmd) can be used to generate an EDA report like [this,](https://htmlpreview.github.io/?https://github.com/gexijin/gEDA/blob/main/example_report.html)  from any data set. 
+
+Contact or feedback [Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/)
 
 # Example plots
 
