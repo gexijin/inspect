@@ -6,7 +6,7 @@ Writtend mostly by GPT-4, this [R Markdown file](https://github.com/gexijin/gEDA
 
 ![image](https://github.com/gexijin/gEDA/assets/18232433/3b4d49cc-a9db-49ff-9790-2e6c5f6f5f4d)
 
-<img src="https://github.com/gexijin/gEDA/assets/18232433/3b4d49cc-a9db-49ff-9790-2e6c5f6f5f4d" width="600" height="600">
+<img src="https://github.com/gexijin/gEDA/assets/18232433/3b4d49cc-a9db-49ff-9790-2e6c5f6f5f4d" width="800" height="800">
 
 ![image](https://github.com/gexijin/gEDA/assets/18232433/e67f51c7-be2e-403d-b56f-6130791650d3)
 
