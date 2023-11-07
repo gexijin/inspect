@@ -1,8 +1,26 @@
 # An RMarkdown template for exploratory analysis of any dataset
 
 Writtend mostly by GPT-4, this [R Markdown file](https://github.com/gexijin/gEDA/blob/main/eda.Rmd) can be used to generate an EDA report like [this,](https://htmlpreview.github.io/?https://github.com/gexijin/gEDA/blob/main/example_report.html)  from any data set. 
+This template can also be used from . In fact, it was originally written for Rtutor.
 
 Contact or feedback [Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/)
+
+#  Main points
+Given a dataset, the main idea is to streamline EDA:
+
+1.  Starts with a data summary.
+2.  Any missing values and outliers?
+3.  Plots distribution of numerical variables using histograms and QQ plots. When excessive skewness is present, a log transformation is recommended.
+4.  Distribution of categorical variables.
+5.  It provides a general data overview with a heatmap and a correlation plot.
+6.  Correlation matrix (corrplot)
+7.  Scatter plots to examine correlations between numerical variables.
+8.  It uses violin plots and performs ANOVA to study the differences between groups delineated by categorical variables.
+9.  Are categorical variables independent of each other? Uses Chi-squared test and bar plots.
+
+To use this RMarkdown file, you just need to obtain a copy from this GitHub repository. Replace the demo data file with your own, specify a target variable, and you’re ready to render the report.
+
+If that sounds like too much work, simply upload your data file to [RTutor.ai](https://RTutor.ai), and click on the EDA tab. A comprehensive report will be generated in 2 minutes. The template was originally written for RTutor.
 
 # Example plots
 
