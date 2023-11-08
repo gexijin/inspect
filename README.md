@@ -1,6 +1,6 @@
 # An RMarkdown template for exploratory analysis (EDA)
 
-Writtend mostly by GPT-4, this [R Markdown file](https://github.com/gexijin/gEDA/blob/main/eda.Rmd) can be used to generate an EDA report like [this,](https://rpubs.com/ge600/eda)  from any data set.  Contact or feedback [Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/)
+Writtend mostly by GPT-4, this [R Markdown file](https://github.com/gexijin/gEDA/blob/main/eda.Rmd) can be used to generate an EDA [report like this,](https://rpubs.com/ge600/eda)  from any data set.  Contact or feedback [Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/)
 
 #  Main goal
 Exploratory data analysis (EDA) is an essential first step in any data science project. Consider it the equivalent of an annual doctor’s check-up but for data science projects. I have long believed that EDA can be automated as the tasks are very general. While there are existing R packages for EDA such as DataExplorer, summarytools, tableone, and GGally, I have not found what I was looking for. Leveraging GPT-4, I was able to create an EDA script in just a few hours.
