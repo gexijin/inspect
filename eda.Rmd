@@ -16,6 +16,7 @@ library(ggplot2)
 
 max_data_points_eda <- 2000
 target_bin <- NULL
+target_var <- NULL 
 ```
 
 # Read data
@@ -24,7 +25,7 @@ target_bin <- NULL
 df <- diamonds[sample(1:nrow(diamonds),5000),]
 
 # Set target/dependent variable, if any
-target_var <- "price" 
+target_var <- NULL 
 
 # No target variable
 #target_var <- NULL  
@@ -68,25 +69,33 @@ df <- df %>% select(-one_of(cols_to_remove))
 
 If target variable is specified, bin this variable into another variable called target_bin.
 ```{r generate-target}
+target_bin <- NULL
 # Check if the target_var is in the dataframe and is not NA
-if (!is.na(target_var) && target_var %in% names(df)) {
-  # Check if the target variable is numerical
-  if (is.numeric(df[[target_var]])) {
-    # Create bins for the numerical target variable
-    target_bin <- cut(df[[target_var]],
-                      breaks = 5,
-                      labels = c("low", "low_mid", "mid", "upper_mid", "high"),
-                      include.lowest = TRUE
-    )
-    print(paste("Binned target variable", target_var, " as", "target_bin"))
+if (!is.null(target_var)) {
+  if (target_var %in% names(df)) {
+    # Check if the target variable is numerical
+    if (is.numeric(df[[target_var]])) {
+      # Create bins for the numerical target variable
+      target_bin <- cut(
+        df[[target_var]],
+        breaks = 5,
+        labels = c("low", "low_mid", "mid", "upper_mid", "high"),
+        include.lowest = TRUE
+      )
+      print(paste("Binned target variable", target_var, " as", "target_bin"))
+    } else {
+      print(paste("The target variable, ", target_var, ", is a categorical variable."))
+    }
   } else {
-    print(paste("The target variable, ", target_var, ", is a categorical variable."))
+    print("Selected variable is not part of the data. Proceeding with general EDA.")
+    target_var <- NULL   
   }
 } else {
   print("No valid target variable selected. Proceeding with general EDA.")
-  target_var <- NULL
+  target_var <- NULL 
 }
 ```
+
 
 
 
