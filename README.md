@@ -2,15 +2,14 @@
 # Inspect: An R Package for automated EDA (exploratory analysis)
 Writtend mostly by GPT-4, this R package mainly renders an EDA report based on this [R Markdown file.](https://raw.githubusercontent.com/gexijin/inspect/main/inst/eda.Rmd)  It can be used to generate an EDA [report like this,](https://rpubs.com/ge600/eda)  from any data set.  Contact or feedback [Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/)
 
-# Install 
+# Install & use
 ```
 library("remotes")
 install_github("gexijin/inspect")
 library(inspect)
-# Generate EDA report for the default Iris data
-eda(mtcars)
-# Specifying a dependent variable
-eda_report(iris, "Species")
+
+eda(mtcars)   # Generate EDA report for a data frame such as the Iris data
+eda(iris, "Species")  # Specifying a dependent/target variable
 ```
 #  Main goal
 Exploratory data analysis (EDA) is an essential first step in any data science project. Consider it the equivalent of an annual doctor’s check-up but for data science projects. I have long believed that EDA can be automated as the tasks are very general. While there are existing R packages for EDA such as DataExplorer, summarytools, tableone, and GGally, I have not found what I was looking for. Leveraging GPT-4, I was able to create an EDA script in just a few hours.
