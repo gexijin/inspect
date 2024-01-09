@@ -7,6 +7,16 @@ output:
     number_sections: true
     code_folding: hide
     toc: true
+params:
+  df:
+  target:
+  date:
+    label: "Date: "
+    value: !r Sys.Date()
+  printcode:
+    label: "Display Code"
+    value: TRUE
+    input: checkbox
 ---
 The inspect package can be installed from [GitHub.](https://github.com/gexijin/inspect)
 
@@ -14,7 +24,6 @@ The inspect package can be installed from [GitHub.](https://github.com/gexijin/i
 knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
 library(dplyr)
 library(ggplot2)
-
 max_data_points_eda <- 2000
 target_bin <- NULL
 target_var <- NULL 
@@ -22,14 +31,12 @@ target_var <- NULL
 
 # Read data
 ```{r}
-# read file here
-df <- diamonds[sample(1:nrow(diamonds),5000),]
-
-# Set target/dependent variable, if any
-target_var <- NULL 
-
-# No target variable
-#target_var <- NULL  
+df <- params$df
+target_var <- params$target
+```
+```{r}
+df <- iris
+target_var <- "Sepal.Length"
 ```
 
 
@@ -456,21 +463,21 @@ corrplot(M,
 ```{r two-numbers}
 library(GGally)
 library(hexbin)
-
+pair = num_col_pairs[[2]]
 num_cols <- names(df)[sapply(df, is.numeric)]
 if(length(num_cols) > 1) {
   num_col_pairs <- combn(num_cols, 2, simplify = FALSE)
-
+  
   for (pair in num_col_pairs) {
     col_x <- pair[1]
     col_y <- pair[2]
-
+    
     # Perform correlation test
     corr_test <- cor.test(df[[col_x]], df[[col_y]], method = "pearson")
-
+    
     if (corr_test$p.value < 0.01 && abs(corr_test$estimate) > 0.1) {
       corr_label <- paste("R =", round(corr_test$estimate, 2), "\nP =", format(corr_test$p.value, scientific = TRUE, digits = 2))
-
+      
       if (nrow(df) > 5000) {
         # Use hexbin plot
         p <- ggplot(df, aes_string(x = col_x, y = col_y)) +
@@ -480,25 +487,29 @@ if(length(num_cols) > 1) {
       } else {
         # Use scatter plot
         if (!is.null(target_var) && !is.na(target_var)) {
-          if(target_var != col_x && target_var != col_y){
+          if(target_var != col_x && target_var != col_y){ # target is not in the pair
             df_ggplot <- df
             if(!is.null(target_bin)) {
               df_ggplot$target_bin <- target_bin
             }
-
+            
             color_var <- ifelse(!is.numeric(df[[target_var]]), target_var, "target_bin")
             p <- ggplot(df_ggplot, aes_string(x = col_x, y = col_y, color = color_var)) +
               geom_point(alpha = 0.7) +
               labs(title = paste(col_x, "vs", col_y), x = col_x, y = col_y) +
               guides(color = guide_legend(title = color_var))
+          } else { # target is not in the pair
+            p <- ggplot(df, aes_string(x = col_x, y = col_y)) +
+              geom_point(alpha = 0.7) +
+              labs(title = paste(col_x, "vs", col_y), x = col_x, y = col_y)
           }
-        } else {
+        } else { # No target
           p <- ggplot(df, aes_string(x = col_x, y = col_y)) +
             geom_point(alpha = 0.7) +
             labs(title = paste(col_x, "vs", col_y), x = col_x, y = col_y)
         }
       }
-
+      
       p <- p + annotate("text", x = Inf, y = Inf, label = corr_label, hjust = 1.1, vjust = 1.1, size = 4)
       print(p)
     }
@@ -571,4 +582,4 @@ if(length(cat_var_names) > 1) {
 ```
 
 
-This RMarkdown document was written by [Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/), assisted heavily by GPT-4 (who wrote 90% of the code). Source code on [GitHub.](https://github.com/gexijin/gEDA) No guarantees. No right reserved.  
+This RMarkdown document was written by [Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/), assisted heavily by GPT-4 (who wrote 90% of the code). Source code on [GitHub.](https://github.com/gexijin/inspect) No guarantees. No right reserved.  
