@@ -1,0 +1,26 @@
+Package: inspect
+Type: Package
+Title: Inspect data
+Version: 0.1.0
+Authors@R: 
+    person(given = "Steven",
+           family = "Ge",
+           role = c("aut", "cre"),
+           email = "gelabinfo@gmail.com")
+Maintainer: The package maintainer <gelabinfo@gmail.com>
+Description: More about what it does (maybe more than one line)
+    Use four spaces when indenting paragraphs within the Description.
+License: MIT
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.2.3
+Imports:
+    dplyr,
+    ggplot2,
+    knitr,
+    rmarkdown,
+    gridExtra,
+    e1071,
+    corrplot,
+    GGally,
+    hexbin
