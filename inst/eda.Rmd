@@ -34,10 +34,6 @@ target_var <- NULL
 df <- params$df
 target_var <- params$target
 ```
-```{r}
-df <- iris
-target_var <- "Sepal.Length"
-```
 
 
 # Data pre-process
@@ -463,7 +459,7 @@ corrplot(M,
 ```{r two-numbers}
 library(GGally)
 library(hexbin)
-pair = num_col_pairs[[2]]
+
 num_cols <- names(df)[sapply(df, is.numeric)]
 if(length(num_cols) > 1) {
   num_col_pairs <- combn(num_cols, 2, simplify = FALSE)

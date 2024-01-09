@@ -1,16 +1,4 @@
 
-#' Prepare User input.
-#'
-#' The response from GPT3 sometimes contains strings that are not R commands.
-#'
-#' @param x A number
-#'
-#' @return Returns a number.
-#' @export
-add3 <- function (x) {
-  x + 3
-}
-
 
 #' Create a report for exploratory data analysis (EDA)
 #'
@@ -20,11 +8,14 @@ add3 <- function (x) {
 #' @param target A selected target variable.
 #' @examples
 #' # Example with default parameters (using iris dataset)
-#' eda_report()
+#' eda(iris)
+#'
+#' # Example with a target variable
+#' eda(iris, "Species")
 #'
 #' # Example with custom data frame and target variable
 #' my_data <- data.frame(x = rnorm(100), y = rnorm(100))
-#' eda_report(df = my_data, target = "x")
+#' eda(df = my_data, target = "x")
 #'
 #' @details
 #' The function performs a check on the input data to ensure it is either a data frame or matrix.
@@ -37,7 +28,7 @@ add3 <- function (x) {
 #'
 #' @return This function does not return a value. Instead, it generates an HTML file containing the EDA report and attempts to open this file in the default web browser.
 #' @export
-eda_report <- function(df = iris, target = "Species") {
+eda <- function(df, target = NULL) {
   # Validate input
   if(is.null(df)) {
     stop("No data frame provided.")
