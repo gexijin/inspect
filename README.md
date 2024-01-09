@@ -1,6 +1,6 @@
 
 # Inspect: An R Package for automated EDA (exploratory analysis)
-Writtend mostly by GPT-4, this R package mainly renders an EDA report based on this [R Markdown file.](https://raw.githubusercontent.com/gexijin/inspect/main/inst/eda.Rmd)  It can be used to generate an EDA [report like this,](https://rpubs.com/ge600/eda)  from any data set.  Contact or feedback [Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/)
+Writtend mostly by GPT-4, this R package mainly renders an EDA report based on this [R Markdown file.](https://raw.githubusercontent.com/gexijin/inspect/main/inst/eda.Rmd)  It can be used to generate an EDA [report like this,](https://rpubs.com/ge600/eda)  from any data set. You can also generate this report using the Shiny app [RTutor.](https://RTutor.ai)  Contact or feedback [Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/)
 
 # Install & use
 ```
