@@ -8,7 +8,7 @@ library("remotes")
 install_github("gexijin/inspect")
 library(inspect)
 
-eda(mtcars)   # Generate EDA report for a data frame such as the Iris data
+eda(mtcars)   # Generate EDA report for a data frame, i.e. mtcars
 eda(iris, "Species")  # Specifying a dependent/target variable
 ```
 #  Main goal
