@@ -4,15 +4,13 @@ Writtend mostly by GPT-4, this [R Markdown file](https://github.com/gexijin/gEDA
 
 # Install 
 ```
-install.packages("remotes")
-remotes::install_github("gexijin/inspect")
+library("remotes")
+install_github("gexijin/inspect")
 library(inspect)
 # Generate EDA report for the default Iris data
-eda_report()
-# EDA report for the faithful data
-eda_report(faithful)
-# EDA report for the default Iris data with Sepal Length as target variable
-eda_report(df = iris, target = "Sepal.Length")
+eda(iris)
+# Specifying a dependent variable
+eda_report(iris, "Species")
 ```
 #  Main goal
 Exploratory data analysis (EDA) is an essential first step in any data science project. Consider it the equivalent of an annual doctor’s check-up but for data science projects. I have long believed that EDA can be automated as the tasks are very general. While there are existing R packages for EDA such as DataExplorer, summarytools, tableone, and GGally, I have not found what I was looking for. Leveraging GPT-4, I was able to create an EDA script in just a few hours.
