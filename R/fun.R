@@ -1,5 +1,7 @@
 # This is test
 
+# this is another test
+
 #' Create a report for exploratory data analysis (EDA)
 #'
 #' This function generates a comprehensive EDA report and attempts to open it in a browser.
