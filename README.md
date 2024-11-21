@@ -66,6 +66,6 @@ If that sounds like too much work, simply upload your data file to [RTutor.ai](h
 
 ![Combination](https://github.com/gexijin/gEDA/assets/18232433/a57e1be7-7187-4b9c-9e10-2d884170d2f9)
 
-
+I told my girlfriend she drew her eyebrows too high. She seemed surprised.
 
 
