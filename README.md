@@ -1,4 +1,9 @@
 
+# Test from  Jack
+
+
+
+
 # Inspect: An R Package for automated EDA (exploratory analysis)
 Writtend mostly by GPT-4, this R package renders an EDA report based on this [R Markdown file.](https://raw.githubusercontent.com/gexijin/inspect/main/inst/eda.Rmd)  It can be used to generate an EDA [report like this,](https://rpubs.com/ge600/eda)  from any data set. You can also generate this report using the Shiny app [RTutor.](https://RTutor.ai)  Contact or feedback [Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/)
 
@@ -66,7 +71,25 @@ If that sounds like too much work, simply upload your data file to [RTutor.ai](h
 
 ![Combination](https://github.com/gexijin/gEDA/assets/18232433/a57e1be7-7187-4b9c-9e10-2d884170d2f9)
 
+##
 
+
+# Test message for pull request - Aidan Frederick
+
+Drew
+
+DGRTERT
+
+Kayleighh
+
+
+# Elizabeth Elsen 
+#test3
+
+#Allie U
+
+
+Why do fathers take an extra pair of socks when they go golfing? In case they get a hole in one!
 
 #Wesley
 
