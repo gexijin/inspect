@@ -1,6 +1,7 @@
 # This is test
 
 # this is another test
+# test of branch for color change.
 
 #' Create a report for exploratory data analysis (EDA)
 #'
