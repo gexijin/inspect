@@ -66,6 +66,19 @@ If that sounds like too much work, simply upload your data file to [RTutor.ai](h
 
 ![Combination](https://github.com/gexijin/gEDA/assets/18232433/a57e1be7-7187-4b9c-9e10-2d884170d2f9)
 
+
 Drew
 
+DGRTERT
+
+Kayleighh
+
+
+# Elizabeth Elsen 
+#test3
+
+
+
+
+Why do fathers take an extra pair of socks when they go golfing? In case they get a hole in one!
 
